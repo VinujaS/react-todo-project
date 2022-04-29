@@ -10,14 +10,14 @@ import { HashRouter } from "react-router-dom"
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <Navbar />
             <Routes>
                 <Route exact path = "/" element={<TodoContainer/>} />
                 <Route path = "/about/*" element={<About/>} />
                 <Route path = "*" element={<NotMatch/>} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>, 
     document.getElementById("root")
 )
